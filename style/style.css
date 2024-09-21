@@ -65,6 +65,15 @@ ul#menu li a:hover, ul#menu li.selected a {
   width: 220px;
 }
 
+.sidebar img {
+  width: 220px; /* Increased photo size */
+  height: 220px;
+}
+
+.sidebar ul {
+  font-size: 1.1em; /* Adjusted link size to match the larger photo */
+}
+
 #content {
   background: #FFF;
   padding: 20px;
