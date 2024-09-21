@@ -1,6 +1,6 @@
 body {
   font: normal .80em 'trebuchet ms', arial, sans-serif;
-  background: #F0EFE2 url(background.png) repeat;
+  background: linear-gradient(45deg, #FFDEE9, #B5FFFC);
   color: #555;
   line-height: 1.7em;
 }
@@ -14,9 +14,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header {
-  background: #1D1D1D url(header.png) repeat;
+  background: #FF5733;
   height: 240px;
-  border-bottom: 5px solid #1293EE;
+  border-bottom: 5px solid #FF6F61;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -29,7 +29,7 @@ ul#menu li a {
 
 ul#menu li a:hover {
   color: #EEE;
-  background: #0D66A5;
+  background: #E91E63;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -46,13 +46,13 @@ ul#menu li a:hover {
 }
 
 .form_settings .submit {
-  background: linear-gradient(45deg, #1293EE, #0D66A5);
+  background: linear-gradient(45deg, #E91E63, #FF6F61);
   border: none;
   border-radius: 5px;
   transition: background 0.3s ease;
 }
 
 .form_settings .submit:hover {
-  background: linear-gradient(45deg, #0D66A5, #1293EE);
+  background: linear-gradient(45deg, #FF6F61, #E91E63);
   transform: translateY(-2px);
 }
