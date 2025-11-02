@@ -1,0 +1,299 @@
+body {
+  font: normal 0.9em 'Trebuchet MS', Arial, sans-serif;
+  background: linear-gradient(45deg, #1e3a5f, #6e7fa5);
+  color: #555;
+  line-height: 1.7em;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header (Blue Box) */
+#header {
+  background-color: #1a2b48;
+  border-bottom: 5px solid #4a6583;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 84%;                /* slightly increased to balance scaling */
+  max-width: 1150px;
+  padding: 30px 0;
+  color: #e0e6ed;
+  text-align: center;
+  border-radius: 12px 12px 0 0;
+  margin: 40px auto 0 auto;
+  box-sizing: border-box;
+}
+
+/* Main white box */
+#content {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 0 0 12px 12px;
+  width: 84%;                /* identical to header width */
+  max-width: 1150px;
+  margin: 0 auto 60px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+/* Grid fix */
+#site_content {
+  display: grid;
+  grid-template-columns: 280px 1fr 280px;
+  gap: 25px;
+  align-items: start;
+  justify-content: center;
+  width: 90%;
+  margin: 20px auto;
+  position: relative;
+}
+
+/* Left Column */
+#left-column {
+  grid-column: 1;
+  text-align: center;
+}
+
+#left-column img.profile-photo {
+  width: 240px;
+  height: 240px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Center */
+#content {
+  grid-column: 2;
+}
+
+/* Right Column */
+#right-column {
+  grid-column: 3;
+  text-align: center;
+}
+
+.links-section {
+  background-color: rgba(255,255,255,0.08);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.25);
+}
+
+
+#logo_text h1 {
+  font-size: 2.5em;
+  color: #e0e6ed;
+  margin: 0;
+  text-align: center;
+}
+
+#menubar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.sidebar {
+  position: static;   /* ✅ participate in grid layout */
+  width: 100%;
+  text-align: center;
+}
+
+ul#menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul#menu li {
+  margin: 5px 0;
+}
+
+ul#menu li a {
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  display: block;
+}
+
+ul#menu li a:hover,
+ul#menu li.selected a {
+  color: #e0e6ed;
+  background: #4a6583;
+}
+
+.sidebar img {
+  width: 220px;
+  height: 220px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.sidebar ul {
+  font-size: 1.1em;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Consistent info box styling */
+.latest-news {
+  background-color: #e9eef5;
+  border: 1px solid #4a6583;
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-top: 30px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.latest-news h2 {
+  color: #1a2b48;
+  font-size: 1.4em;
+  margin-bottom: 12px;
+  border-bottom: 3px solid #4a6583;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.news-item p {
+  font-size: 1.05em;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsive behavior */
+@media (max-width: 1000px) {
+  #header,
+  #content {
+    width: 90%;
+    max-width: none;
+  }
+
+  #site_content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Sidebar Refresh */
+.sidebar {
+  position: absolute;
+  right: 20px;
+  top: 100px;
+  width: 250px;
+  text-align: center;
+}
+
+.profile-photo {
+  width: 240px;
+  height: 240px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-photo:hover {
+  transform: scale(1.03);
+}
+
+/* Links Section Styling */
+.links-section {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-top: 18px;
+  padding: 15px 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+.links-section h3 {
+  color: #e0e6ed;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* Links List */
+.links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-list li {
+  margin: 10px 0;
+}
+
+/* Stylish link buttons */
+.link-icon {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: #ffffff;
+  background: linear-gradient(90deg, #4a6583, #1a2b48);
+  padding: 8px 15px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.link-icon:hover {
+  background: #6e8ab3;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.link-icon:active {
+  transform: translateY(1px);
+}
+
+/* Minor tweaks for icons per platform */
+.email::before { content: ""; }
+.linkedin { background: linear-gradient(90deg, #0077b5, #005983); }
+.github { background: linear-gradient(90deg, #333, #666); }
+.orcid { background: linear-gradient(90deg, #a6ce39, #7ba027); }
+.scholar { background: linear-gradient(90deg, #4285f4, #1a53c7); }
+
+/* Fix z-index layer issues that block hover */
+#header, 
+#menubar, 
+#menu li a {
+  position: relative;
+  z-index: 3;
+}
+
+/* Ensure image and sidebar don’t cover navbar */
+#left-column,
+.profile-photo {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover feedback enhancement */
+ul#menu li a:hover,
+ul#menu li.selected a {
+  color: #e0e6ed;
+  background: #4a6583;
+  transform: translateY(-1px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Optional: Cursor feedback on all nav links */
+#menu a {
+  cursor: pointer;
+}
